@@ -5,8 +5,12 @@ const port = 3000;
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-  res.render('index', { message: 'Olá, Mundo!' });
+app.get('/', (req, res) => { //controller/rota    get é o verbo HTTP   req é o que entra no servidor (requisição) == a resposta é res (o que sai)
+  res.render('index', { message: 'Olá, Mundo!' });   //
+});
+
+app.get('/contatos', (req, res) => { 
+  res.render('contatos', { message: 'Esta é a página de contato.' });   //
 });
 
 app.listen(port, () => {
