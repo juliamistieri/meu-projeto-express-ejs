@@ -15,7 +15,8 @@ const produto = [
   {id: 7, nome:"", preco:"", descricao:"", imagem:""},
   {id: 8, nome:"", preco:"", descricao:"", imagem:""},
   {id: 9, nome:"", preco:"", descricao:"", imagem:""},
-  {id: 10, nome:"", preco:"", descricao:"", imagem:""}
+  {id: 10, nome:"", preco:"", descricao:"", imagem:""},
+  
 ]
 
 app.get('/', (req, res) => { //controller/rota    get é o verbo HTTP   req é o que entra no servidor (requisição) == a resposta é res (o que sai)
