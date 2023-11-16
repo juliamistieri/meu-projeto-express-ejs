@@ -5,7 +5,7 @@ const port = 3000;
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
-const produto = [
+const produtos = [
   {id: 1, nome:"", preco:"", descricao:"", imagem:""},
   {id: 2, nome:"", preco:"", descricao:"", imagem:""},
   {id: 3, nome:"", preco:"", descricao:"", imagem:""},
@@ -19,8 +19,13 @@ const produto = [
   
 ]
 
+function buscarProdutoPorID(id){
+  const produto = produtos.find(produto => produto.id == id);
+  return produto || null
+}
+
 app.get('/', (req, res) => { //controller/rota    get é o verbo HTTP   req é o que entra no servidor (requisição) == a resposta é res (o que sai)
-  res.render('index', { message: 'LISTA DE PRODUTOS' });   //
+  res.render('index', { produtos });   //
 });
 
 app.get('/produtos', (req, res) => { 
