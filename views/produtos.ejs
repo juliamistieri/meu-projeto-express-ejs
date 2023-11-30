@@ -34,13 +34,13 @@
             <div class="card mb-3">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="https://imgnike-a.akamaihd.net/768x768/026942ID.jpg" class="img-fluid rounded-start" alt="500px">
+                        <img src="<%= produto.imagem %>" class="img-fluid rounded-start" alt="500px">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title fs-3">Jaqueta Nike Windrunner Tech Fleece</h5>
-                            <p class="card-text fs-5">Combinando 2 de nossos looks mais icônicos, este moletom com capuz de zíper completo foi inspirado em nossa jaqueta atemporal Windrunner, bem como em nossa jaqueta Tech Fleece. Ele é feito para ter um caimento solto nos ombros, peito e corpo para um ajuste esportivo que você pode usar em camadas. Os bolsos com fita exclusiva proporcionam um armazenamento seguro e fácil acesso. A Jaqueta Nike Windrunner Tech Fleece é perfeita para os dias mais frios, mantendo-o confortável e estiloso em todas as situações.</p>
-                            <p class="card-text fs-4"><small class="text-body-secondary">R$749,99</small></p>
+                            <h5 class="card-title fs-3"><%= produto.nome %></h5>
+                            <p class="card-text fs-5"><%= produto.descricao %></p>
+                            <p class="card-text fs-4"><small class="text-body-secondary"><%= produto.preco %></small></p>
                             <button class="btn btn-primary fs-5">Comprar</button>
                         </div>
                     </div>
@@ -50,6 +50,7 @@
     </div>
     <div class="col"></div>
 </div>
+
 <div class="text-align container d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
   <p>&copy; COPYRIGHT JULIA MISTIERI 3003</p>
 </div>
